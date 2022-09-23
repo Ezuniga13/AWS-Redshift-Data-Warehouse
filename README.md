@@ -10,7 +10,7 @@ Data Engineer
 Sparkify analytics team is interested in understanding what songs users are listening to on their music stream app. However, they don't
 have an easy way to query their data that resides in a directory of json logs on user acitivity and metadata on the songs.
 
-I've created a data warehouse with tables designed to optimize queries on songplay analysis. I've also built an ETL pipeline using python, SQL, IAM, EC2, s3 and IaC
+I've created a data warehouse with tables designed to optimize queries on songplay analysis. I've also built an ETL pipeline using python, SQL, IAM, EC2, s3, AWD sdk boto3 and IaC
 that transfers data from files in two local directories into these tables.
 
 I've defined fact(songplays) and dimension(users, songs, time, artists) tables for a star schema.
