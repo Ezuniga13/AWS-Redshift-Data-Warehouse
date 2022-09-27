@@ -1,3 +1,24 @@
+"""
+These are the sql queries to drop, create and insert data into redshift.
+    
+Drop Tables:
+-----------
+Queries to drop all tables that were created
+in redshift.
+    
+Create Tables:
+--------------
+Queries to create staging and star tables.
+    
+Insert Tables:
+--------------
+Queries to insert data.
+    
+Variables:
+---------
+All tables for each need is put in a list for ETL.py
+to iterate over and process data.
+"""
 import configparser
 
 
@@ -7,17 +28,17 @@ config.read('dwh.cfg')
 
 # DROP TABLES
 
-staging_events_table_drop = "DROP TABLE IF EXISTS staging_events"
-staging_songs_table_drop = "DROP TABLE IF EXISTS staging_songs"
-songplay_table_drop = "DROP TABLE IF EXISTS songplays"
-user_table_drop = "DROP TABLE IF EXISTS users"
-song_table_drop = "DROP TABLE IF EXISTS songs"
-artist_table_drop = "DROP TABLE IF EXISTS artists"
-time_table_drop = "DROP TABLE IF EXISTS time"
+staging_events_table_drop = "DROP TABLE IF EXISTS staging_events CASCADE"
+staging_songs_table_drop = "DROP TABLE IF EXISTS staging_songs CASCADE"
+songplay_table_drop = "DROP TABLE IF EXISTS songplays CASCADE"
+user_table_drop = "DROP TABLE IF EXISTS users CASCADE"
+song_table_drop = "DROP TABLE IF EXISTS songs CASCADE"
+artist_table_drop = "DROP TABLE IF EXISTS artists CASCADE"
+time_table_drop = "DROP TABLE IF EXISTS time CASCADE"
 
 # CREATE TABLES
 
-staging_events_table_create= ("""
+staging_events_table_create = ("""
     CREATE TABLE IF NOT EXISTS staging_events
         (artist             VARCHAR,
          auth               VARCHAR,
