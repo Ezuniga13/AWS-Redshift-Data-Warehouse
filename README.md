@@ -7,7 +7,7 @@ Data Engineer
 
 ## Overview
 
-Sparkify analytics team is interested in understanding what songs users are listening to on their music stream app. However, they don't
+An analytics team is interested in understanding what songs users are listening to on their music stream app. However, they don't
 have an easy way to query their data that resides in a directory of json logs on user acitivity and metadata on the songs.
 
 I've created a data warehouse with tables designed to optimize queries on songplay analysis. I've also built an ETL pipeline using python, SQL, IAM, EC2, s3, AWD sdk boto3 and IaC
